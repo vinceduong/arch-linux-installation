@@ -8,12 +8,11 @@
 
 ### 2. Partionning
 
-Choose your disk, to check available disks:   
-```lsblk```
+Choose your disk, to check available disks
+> ```lsblk```
 
-Partition your disk:   
-
-```fdisk /dev/[DISK NAME]```
+Enter in the disk partition menu ```fdisk /dev/[DISK NAME]```
+> Example: ```fdisk /dev/sda```
 
 #### Create a first partition (boot, grub menu)
 
