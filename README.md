@@ -129,7 +129,7 @@ By running ```lsblk``` you should see the partitions mounted on the appropriate 
 
 Install arch linux on `/mnt` with pacstrap, pacstrap is the package manager for the arch linux install process. We are going to install `base` `base-devel` and `vim` as an editor.
 
-Run ```pacstrap /mnt base base-devel vim```. This will propably take a couple of minutes.
+Run ```pacstrap /mnt base base-devel linux linux-firmware vim```. This will propably take a couple of minutes.
 
 ### Create an fstab file
 
@@ -215,6 +215,10 @@ For safety reasons run ```umount -R /mnt```
 <img src="https://user-images.githubusercontent.com/31627855/116784658-afba4000-aa95-11eb-9228-c5bc603ac6af.png" alt="screenshot" width="500"/>
 
 You can now run ```reboot``` and remove your USB stick when your computer is off
+
+Now you have a minimal installation of linux and you can start to play around
+
+Your login will be by default `root` and your password is the one you set
 
 
 
