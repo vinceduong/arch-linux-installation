@@ -131,6 +131,98 @@ Install arch linux on `/mnt` with pacstrap, pacstrap is the package manager for 
 
 Run ```pacstrap /mnt base base-devel vim```. This will propably take a couple of minutes.
 
+### Create an fstab file
+
+Until now, we manually mounted our partitions, but we need to tell linux how to mount automatically the partitions on boot. An `fstab` file describes the necessary mounts.
+
+Run ```genfstab -U /mnt >> /mnt/etc/fstab```
+
+By running ```cat /mnt/etc/fstab``` you should see
+
+<img src="https://user-images.githubusercontent.com/31627855/116783076-0d965a00-aa8d-11eb-8792-d5c1b4ec1de8.png" alt="screenshot" width="500"/>
+
+### Jump into our arch linux installation
+
+Run ```arch-chroot /mnt```, now you are in the arch installation, by typing ```ls``` you should see
+
+<img src="https://user-images.githubusercontent.com/31627855/116783636-12104200-aa90-11eb-8bf2-07e3e89d107c.png" alt="screenshot" width="500"/>
+
+### Install a network manager
+
+By default, arch linux doesn't come with a network manager, so you wont be granted with network access.
+To have internet access by booting into arch
+
+Run ```pacman -S networkmanager```
+
+To automatically start networmanager run ```systemctl enable NetworkManager```
+
+### Install GRUB boot loader
+
+GRUB will detect automatically your partitions and show a little menu to load into your system
+
+Run ```pacman -S grub```
+
+Install grub on your drive
+
+Run ```grub-install --target=i386-pc /dev/sda```
+
+<img src="https://user-images.githubusercontent.com/31627855/116783928-c9598880-aa91-11eb-8f1a-bb5594e89a1c.png" alt="screenshot" width="500"/>
+
+Generate a configuration file
+
+Run ```grub-mkconfig -o /boot/grub/grub.cfg```
+
+### Create a password
+
+Run ```passwd``` and set a password
+
+### Generate a locale
+
+Run ```vim /etc/locale.gen``` and uncomment your locale, in my case it is `EN_US`
+
+<img src="https://user-images.githubusercontent.com/31627855/116784119-bf845500-aa92-11eb-862f-6bf5064f73f9.png" alt="screenshot" width="500"/>
+
+Save the file and exit
+
+Run ```locale-gen```
+
+Set your language by creating a new file at `etc/locale.conf`
+
+Run ```vim /etc/locale.conf```
+
+Write the following into your file ```LANG=[YOUR_LANG].UTF-8```
+
+<img src="https://user-images.githubusercontent.com/31627855/116784212-54874e00-aa93-11eb-94e4-6436f8ec1e3d.png" alt="screenshot" width="500"/>
+
+Save the file and exit
+
+### Configure system name
+
+Run ```vim /etc/hostname```
+
+And insert your system name
+
+<img src="https://user-images.githubusercontent.com/31627855/116784562-34588e80-aa95-11eb-91c3-8b143e69a5b7.png" alt="screenshot" width="500"/>
+
+Save the file and exit
+
+### Reboot
+
+Run `exit` to exit the arch installation
+
+For safety reasons run ```umount -R /mnt```
+
+<img src="https://user-images.githubusercontent.com/31627855/116784658-afba4000-aa95-11eb-9228-c5bc603ac6af.png" alt="screenshot" width="500"/>
+
+You can now run ```reboot``` and remove your USB stick when your computer is off
+
+
+
+
+
+
+
+
 
 
 
