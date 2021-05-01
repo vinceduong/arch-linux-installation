@@ -101,9 +101,28 @@ First we want to mount the root directory into `/mnt`
 
 ```mount /dev/sda3 /mnt```
 
-Now we can create the home directory for our home partition
+Create the home directory for the home partition
 
 ```mkdir /mnt/home```
 
-If you run ```ls /mnt/```
+Create the boot directory
+
+```mkdir /mnt/boot```
+
+If you run ```ls /mnt/``` you should see this
+
+<img src="https://user-images.githubusercontent.com/31627855/116782532-f3a74800-aa89-11eb-9e5a-48523016f20f.png" alt="screenshot" width="500"/>
+
+Mount the boot partition to the boot directory
+
+```mount /dev/sda1 /mnt/boot```
+
+Mount the home partition to the home directory
+
+```mount /dev/sda4 /mnt/home```
+
+By running ```lsblk``` you should see this
+
+<img src="https://user-images.githubusercontent.com/31627855/116782607-74feda80-aa8a-11eb-9ee4-a571cdc6ce19.png" alt="screenshot" width="500"/>
+
 
