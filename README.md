@@ -90,6 +90,6 @@ For the swap partition run
 
 <img src="https://user-images.githubusercontent.com/31627855/116779243-6a861600-aa75-11eb-9695-d3fece23792e.png" alt="screenshot" width="500"/>
 
-
-
+To complete swap setup, run
+```swapon /dev/sda2```
 
