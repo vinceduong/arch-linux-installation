@@ -93,3 +93,17 @@ For the swap partition run
 To complete swap setup, run
 ```swapon /dev/sda2```
 
+### Mount filesystems to linux
+
+In order to make our filesystems usable for arch linux, we need to mount them into `MOUNTPOINTS`
+
+First we want to mount the root directory into `/mnt`
+
+```mount /dev/sda3 /mnt```
+
+Now we can create the home directory for our home partition
+
+```mkdir /mnt/home```
+
+If you run ```ls /mnt/```
+
