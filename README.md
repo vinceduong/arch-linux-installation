@@ -1,4 +1,6 @@
-# Install Arch Linux from scratch
+# <img src="https://user-images.githubusercontent.com/31627855/116778146-833ffd00-aa70-11eb-802e-4051a432f479.png" width="50"/> Arch Linux Install from scratch
+
+
 
 ## Minimal Install
 
