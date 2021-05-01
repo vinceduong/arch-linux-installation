@@ -70,9 +70,18 @@ Now your partition table should look like this (press `p`)
 
 Now if you type again ```lsblk``` you should have a similar output
 
-<img src="https://user-images.githubusercontent.com/31627855/116778736-0f075880-aa74-11eb-8392-108a3970652d.png" alt="screenshot" width="500"/>
 
 
+### Make filesystems
 
+We need to create filesystems for the boot, programs and home location, so in our case `sda1`, `sda3`, `sda4`
 
+You can type theses commands
+```
+mkfs.ext4 /dev/sda1
+mkfs.ext4 /dev/sda3
+mkfs.ext4 /dev/sda4
+```
+
+<img src="https://user-images.githubusercontent.com/31627855/116779175-f0ee2800-aa74-11eb-8fcd-74fb69ee7855.png" alt="screenshot" width="500"/>
 
