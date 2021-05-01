@@ -111,7 +111,7 @@ Create the boot directory
 
 If you run ```ls /mnt/``` you should see this
 
-<img src="https://user-images.githubusercontent.com/31627855/116782532-f3a74800-aa89-11eb-9e5a-48523016f20f.png" alt="screenshot" width="500"/>
+<img src="https://user-images.githubusercontent.com/31627855/116782532-f3a74800-aa89-11eb-9e5a-48523016f20f.png" alt="screenshot" width="300"/>
 
 Mount the boot partition to the boot directory
 
@@ -121,8 +121,16 @@ Mount the home partition to the home directory
 
 ```mount /dev/sda4 /mnt/home```
 
-By running ```lsblk``` you should see this
+By running ```lsblk``` you should see the partitions mounted on the appropriate `MOUNTPOINTS`
 
 <img src="https://user-images.githubusercontent.com/31627855/116782607-74feda80-aa8a-11eb-9ee4-a571cdc6ce19.png" alt="screenshot" width="500"/>
+
+### Install Arch Linux dependencies
+
+Install arch linux on `/mnt` with pacstrap, pacstrap is the package manager for the arch linux install process. We are going to install `base` `base-devel` and `vim` as an editor.
+
+Run ```pacstrap /mnt base base-devel vim```. This will propably take a couple of minutes.
+
+
 
 
