@@ -70,7 +70,7 @@ Now your partition table should look like this (press `p`)
 
 Now if you type again ```lsblk``` you should have a similar output
 
-
+<img src="https://user-images.githubusercontent.com/31627855/116779269-a15c2c00-aa75-11eb-9d38-2ba029febc7c.png" alt="screenshot" width="500"/>
 
 ### Make filesystems
 
@@ -84,4 +84,12 @@ mkfs.ext4 /dev/sda4
 ```
 
 <img src="https://user-images.githubusercontent.com/31627855/116779175-f0ee2800-aa74-11eb-8fcd-74fb69ee7855.png" alt="screenshot" width="500"/>
+
+For the swap partition run
+```mkswap /dev/sda2```
+
+<img src="https://user-images.githubusercontent.com/31627855/116779243-6a861600-aa75-11eb-9695-d3fece23792e.png" alt="screenshot" width="500"/>
+
+
+
 
