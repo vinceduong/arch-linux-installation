@@ -2,7 +2,7 @@
 
 
 
-## Minimal Install
+## Minimal Install In A Classical BIOS
 
 ### Check connection
 
@@ -18,7 +18,7 @@ Enter in the disk partition menu ```fdisk /dev/[DISK NAME]```
 > Example: ```fdisk /dev/sda```
 
 In order to have a stable installation, we need to create different partitions for safety reasons.
-This will make sure that if one part of your installation breaks, it wont affects other partitions
+This will make sure that if one part of your installation breaks, it wont affects other parts of your system
 
 #### 1. Create a first partition (boot, grub menu)
 
