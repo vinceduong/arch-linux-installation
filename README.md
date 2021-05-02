@@ -192,7 +192,7 @@ Run ```vim /etc/locale.conf```
 
 Write the following into your file ```LANG=[YOUR_LANG].UTF-8```
 
-<img src="https://user-images.githubusercontent.com/31627855/116784212-54874e00-aa93-11eb-94e4-6436f8ec1e3d.png" alt="screenshot" width="500"/>
+<img src="https://user-images.githubusercontent.com/31627855/116806671-f0b26300-ab2e-11eb-91b7-e1045e5547d6.png" alt="screenshot" width="500"/>
 
 Save the file and exit
 
